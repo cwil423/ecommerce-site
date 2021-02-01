@@ -2,11 +2,11 @@ import React from "react"
 import styled from "styled-components"
 
 const StyledFooter = styled.div`
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: sticky;
+  /* left: 0;
+  bottom: 0; */
   display: flex;
-  align-items: center;
+  align-content: center;
   justify-content: flex-end;
   background-color: #1b2226;
   height: 50px;

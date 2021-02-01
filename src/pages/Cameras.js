@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { useSelector, useDispatch } from "react-redux"
 import styled from "styled-components"
 import axios from "axios"
 import Layout from "../components/Layout"
@@ -36,6 +37,7 @@ const CameraArea = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+
   @media (min-width: 1200px) {
     width: 1400px;
     height: 100%;
@@ -45,13 +47,18 @@ const CameraArea = styled.div`
 export default function Cameras() {
   const [cameras, setCameras] = useState([])
 
+  const cart = useSelector(state => state.cart)
+  const dispatch = useDispatch()
+
   useEffect(() => {
     axios
       .get("http://localhost:4000/cameras")
       .then(response => setCameras(response.data))
   }, [])
 
-  const addToCartHandler = () => {}
+  const addToCartHandler = () => {
+    dispatch({ type: "ADD", item: "placeholder" })
+  }
 
   return (
     <Layout>
@@ -67,7 +74,6 @@ export default function Cameras() {
             : null}
         </CameraArea>
       </Page>
-      {/* <Button onClick={() => console.log(theme)}>theme</Button> */}
     </Layout>
   )
 }

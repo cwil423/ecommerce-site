@@ -33,19 +33,22 @@ const TitleH1 = styled.h1`
   text-align: center;
   width: 80%;
   height: 200px;
-  @media (max-width: 600px) {
-    font-size: 20px;
-  }
 `
 
 const StyledH4 = styled.h4`
   margin: auto;
   color: white;
+  @media (min-width: 600px) {
+    font-size: 30px;
+  }
 `
 
 const StyledH1 = styled.h1`
   margin: auto;
   color: white;
+  @media (min-width: 600px) {
+    font-size: 50px;
+  }
 `
 
 export default function Homepage() {
