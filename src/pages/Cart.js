@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux"
 import styled from "styled-components"
 import CheckoutCameraCard from "../components/CheckoutCameraCard"
 import Layout from "../components/Layout"
+import Modal from "../components/UI/Modal"
+import Backdrop from "../components/UI/Backdrop"
 
 const StyledRoot = styled.div`
   display: flex;
@@ -86,6 +88,7 @@ const StyledNameAndPriceDiv = styled.div`
 export default function Cart() {
   const cart = useSelector(state => state.cart)
   const [total, setTotal] = useState(0)
+  const [modalOpen, setModalOpen] = useState(false)
 
   useEffect(() => {
     let total = 0
@@ -99,7 +102,15 @@ export default function Cart() {
 
   return (
     <Layout>
+      {modalOpen && <Backdrop />}
       <StyledRoot>
+        {modalOpen && (
+          <Modal
+            title="Thank you for viewing my website!"
+            subtitle="This is as far as the functionality goes."
+            close={() => setModalOpen(false)}
+          />
+        )}
         <StyledCartTitleDiv>
           <h1>Your Cart</h1>
           {cart.length === 0 && <h2>Your cart is currently empty.</h2>}
@@ -133,7 +144,9 @@ export default function Cart() {
               ))}
               <StyledH2>Total: ${total}</StyledH2>
 
-              <StyledCheckoutButton>Checkout</StyledCheckoutButton>
+              <StyledCheckoutButton onClick={() => setModalOpen(true)}>
+                Checkout
+              </StyledCheckoutButton>
             </StyledTotalDiv>
           )}
         </StyledItemsAndTotalDiv>
