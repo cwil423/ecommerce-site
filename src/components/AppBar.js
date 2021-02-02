@@ -11,8 +11,10 @@ const StyledSection = styled.section`
   background-color: #1b2226;
 `
 
-const StyledH1 = styled.h1`
-  color: white;
+const StyledH2 = styled.h2`
+  margin: 0px;
+  padding: 0px;
+  /* color: white; */
 `
 
 const StyledLink = styled(props => <Link {...props} />)`
@@ -28,27 +30,20 @@ export default function AppBar() {
   return (
     <div>
       <StyledSection>
-        <StyledH1>
-          <StyledLink
-            to="/Homepage"
-            activeStyle={{ textDecoration: "underline" }}
-          >
-            Home
-          </StyledLink>
-        </StyledH1>
-        <StyledH1>
-          <StyledLink
-            to="/Cameras"
-            activeStyle={{ textDecoration: "underline" }}
-          >
-            Cameras
-          </StyledLink>
-        </StyledH1>
-        <StyledH1>
-          <StyledLink to="/Cart" activeStyle={{ textDecoration: "underline" }}>
-            Cart
-          </StyledLink>
-        </StyledH1>
+        <StyledLink
+          to="/Homepage"
+          activeStyle={{ textDecoration: "underline" }}
+        >
+          Home
+        </StyledLink>
+
+        <StyledLink to="/Cameras" activeStyle={{ textDecoration: "underline" }}>
+          Cameras
+        </StyledLink>
+
+        <StyledLink to="/Cart" activeStyle={{ textDecoration: "underline" }}>
+          Cart
+        </StyledLink>
       </StyledSection>
     </div>
   )

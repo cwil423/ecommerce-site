@@ -21,7 +21,7 @@ const StyledName = styled.h3`
 export default function Footer() {
   return (
     <StyledFooter>
-      <StyledName>Created by Cole Williamson, @ 2021</StyledName>
+      <StyledName>Created by Cole Williamson @ 2021</StyledName>
     </StyledFooter>
   )
 }

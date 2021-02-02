@@ -8,8 +8,7 @@ const MainDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  height: 94vh;
+  min-height: 1169px;
   width: 100%;
   background-color: #e8b741;
   background-image: url(${cameraPhoto});
@@ -22,6 +21,9 @@ const MainDiv = styled.div`
   }
   @media (min-width: 1000px) {
     background-size: 1600px;
+  }
+  @media (max-width: 600px) {
+    min-height: 661px;
   }
 `
 
@@ -37,7 +39,7 @@ const TitleH1 = styled.h1`
 
 const StyledH4 = styled.h4`
   margin: auto;
-  color: white;
+  /* color: white; */
   @media (min-width: 600px) {
     font-size: 30px;
   }
@@ -45,7 +47,7 @@ const StyledH4 = styled.h4`
 
 const StyledH1 = styled.h1`
   margin: auto;
-  color: white;
+  /* color: white; */
   @media (min-width: 600px) {
     font-size: 50px;
   }

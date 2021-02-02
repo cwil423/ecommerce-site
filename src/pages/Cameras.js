@@ -14,7 +14,6 @@ const Page = styled.div`
   height: 100%;
   padding-top: 25px;
   padding-bottom: 75px;
-  background-image: linear-gradient(to top right, #c4cace, #e8b741);
 
   /* @media (min-width: 1355px) {
     height: 93vh;
@@ -46,18 +45,30 @@ const CameraArea = styled.div`
 
 export default function Cameras() {
   const [cameras, setCameras] = useState([])
+  const [buttonDisabled, setButtonDisabled] = useState(false)
 
   const cart = useSelector(state => state.cart)
   const dispatch = useDispatch()
 
   useEffect(() => {
+    let cameras = null
     axios
       .get("http://localhost:4000/cameras")
-      .then(response => setCameras(response.data))
+      .then(response => {
+        cameras = response.data
+        cameras.forEach(element => {
+          element.amount = 1
+        })
+      })
+      .then(response => setCameras(cameras))
   }, [])
 
-  const addToCartHandler = () => {
-    dispatch({ type: "ADD", item: "placeholder" })
+  const addToCartHandler = item => {
+    // setButtonDisabled(true)
+    dispatch({ type: "ADD", item })
+    // setTimeout(() => {
+    //   setButtonDisabled(false)
+    // }, 200)
   }
 
   return (
@@ -69,7 +80,9 @@ export default function Cameras() {
                 <CameraCard
                   key={cameras.indexOf(camera)}
                   info={camera}
-                ></CameraCard>
+                  addItem={addToCartHandler}
+                  disabled={buttonDisabled}
+                />
               ))
             : null}
         </CameraArea>

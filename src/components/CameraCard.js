@@ -24,21 +24,11 @@ const StyledNameDiv = styled.div`
   text-align: center;
 `
 
-const StyledNameH1 = styled.h1`
-  /* margin: 10px; */
-`
-
 const StyledImage = styled.img`
   height: 200px;
   width: 350px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-`
-
-const StyledPriceDiv = styled.div``
-
-const StyledPriceH2 = styled.h2`
-  /* margin: 5px; */
 `
 
 const StyledDescriptionDiv = styled.div`
@@ -52,6 +42,25 @@ const StyledButtonArea = styled.div`
   padding-top: 15px;
 `
 
+const StyledButton = styled.button`
+  /* font-family : inherit; */
+  font-size: 1em;
+  width: 115px;
+  height: 35px;
+  color: white;
+  background-color: #70a37f;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  &:hover {
+    cursor: pointer;
+    background-color: #2e5339;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+`
+
 export default function CameraCard(props) {
   console.log(props.info)
   return (
@@ -59,19 +68,22 @@ export default function CameraCard(props) {
       <StyledImage src={props.info.photourl}></StyledImage>
       <StyledInfoArea>
         <StyledNameDiv>
-          <StyledNameH1>{props.info.name}</StyledNameH1>
+          <h1>{props.info.name}</h1>
         </StyledNameDiv>
-        <StyledPriceDiv>
-          <StyledPriceH2>{props.info.price}</StyledPriceH2>
-        </StyledPriceDiv>
-
+        <div>
+          <h3>{props.info.price}</h3>
+        </div>
         <StyledDescriptionDiv>
           <p>{props.info.description}</p>
         </StyledDescriptionDiv>
       </StyledInfoArea>
-      <StyledButtonArea>
-        <Button>Add to Cart</Button>
-      </StyledButtonArea>
+
+      <StyledButton
+        disabled={props.disabled}
+        onClick={() => props.addItem(props.info)}
+      >
+        Add to Cart
+      </StyledButton>
     </StyledMainBody>
   )
 }
