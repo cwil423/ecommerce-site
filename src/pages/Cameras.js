@@ -54,13 +54,14 @@ export default function Cameras() {
     let cameras = null;
     axios
       .get("https://ecommerce-site-backend.herokuapp.com/cameras")
-      .then(response => {
-        cameras = response.data;
-        cameras.forEach(element => {
-          element.amount = 1;
-        });
-      })
-      .then(response => setCameras(cameras));
+      .then(response => console.log(response));
+    // .then(response => {
+    //   cameras = response.data;
+    //   cameras.forEach(element => {
+    //     element.amount = 1;
+    //   });
+    // })
+    // .then(response => setCameras(cameras));
   }, []);
 
   const addToCartHandler = item => {
