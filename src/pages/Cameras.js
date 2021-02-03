@@ -53,7 +53,7 @@ export default function Cameras() {
   useEffect(() => {
     let cameras = null;
     axios
-      .get("http://localhost:4000/cameras")
+      .get("https://fervent-kepler-8d0468.netlify.app/cameras")
       .then(response => {
         cameras = response.data;
         cameras.forEach(element => {
