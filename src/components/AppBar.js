@@ -1,6 +1,6 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import React from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
 
 const StyledSection = styled.section`
   display: flex;
@@ -9,13 +9,13 @@ const StyledSection = styled.section`
   width: 100%;
   height: 100px;
   background-color: #1b2226;
-`
+`;
 
 const StyledH2 = styled.h2`
   margin: 0px;
   padding: 0px;
   /* color: white; */
-`
+`;
 
 const StyledLink = styled(props => <Link {...props} />)`
   color: white;
@@ -24,7 +24,7 @@ const StyledLink = styled(props => <Link {...props} />)`
   @media (max-width: 600px) {
     font-size: x-large;
   }
-`
+`;
 
 export default function AppBar() {
   return (
@@ -43,5 +43,5 @@ export default function AppBar() {
         </StyledLink>
       </StyledSection>
     </div>
-  )
+  );
 }

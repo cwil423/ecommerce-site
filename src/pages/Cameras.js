@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react"
-import { useSelector, useDispatch } from "react-redux"
-import styled from "styled-components"
-import axios from "axios"
-import Layout from "../components/layout"
-import Card from "../components/UI/Card"
-import CameraCard from "../components/CameraCard"
-import Button from "../components/UI/Button"
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import styled from "styled-components";
+import axios from "axios";
+import Layout from "../components/layout";
+import Card from "../components/UI/Card";
+import CameraCard from "../components/CameraCard";
+import Button from "../components/UI/Button";
 
 const Page = styled.div`
   display: flex;
@@ -18,18 +18,18 @@ const Page = styled.div`
   /* @media (min-width: 1355px) {
     height: 93vh;
   }   */
-`
+`;
 
 const PageHeader = styled.div`
   display: flex;
   background-color: #e8b741;
   height: 100px;
-`
+`;
 
 const StyledH1 = styled.h1`
   margin: auto;
   color: white;
-`
+`;
 
 const CameraArea = styled.div`
   display: flex;
@@ -41,35 +41,35 @@ const CameraArea = styled.div`
     width: 1400px;
     height: 100%;
   }
-`
+`;
 
 export default function Cameras() {
-  const [cameras, setCameras] = useState([])
-  const [buttonDisabled, setButtonDisabled] = useState(false)
+  const [cameras, setCameras] = useState([]);
+  const [buttonDisabled, setButtonDisabled] = useState(false);
 
-  const cart = useSelector(state => state.cart)
-  const dispatch = useDispatch()
+  const cart = useSelector(state => state.cart);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    let cameras = null
+    let cameras = null;
     axios
       .get("/cameras")
       .then(response => {
-        cameras = response.data
+        cameras = response.data;
         cameras.forEach(element => {
-          element.amount = 1
-        })
+          element.amount = 1;
+        });
       })
-      .then(response => setCameras(cameras))
-  }, [])
+      .then(response => setCameras(cameras));
+  }, []);
 
   const addToCartHandler = item => {
     // setButtonDisabled(true)
-    dispatch({ type: "ADD", item })
+    dispatch({ type: "ADD", item });
     // setTimeout(() => {
     //   setButtonDisabled(false)
     // }, 200)
-  }
+  };
 
   return (
     <Layout>
@@ -88,5 +88,5 @@ export default function Cameras() {
         </CameraArea>
       </Page>
     </Layout>
-  )
+  );
 }

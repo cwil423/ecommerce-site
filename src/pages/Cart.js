@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import styled from "styled-components"
-import CheckoutCameraCard from "../components/CheckoutCameraCard"
-import Layout from "../components/layout"
-import Modal from "../components/UI/Modal"
-import Backdrop from "../components/UI/Backdrop"
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import styled from "styled-components";
+import CheckoutCameraCard from "../components/CheckoutCameraCard";
+import Layout from "../components/layout";
+import Modal from "../components/UI/Modal";
+import Backdrop from "../components/UI/Backdrop";
 
 const StyledRoot = styled.div`
   display: flex;
@@ -12,29 +12,29 @@ const StyledRoot = styled.div`
   min-height: 1169px;
   padding-top: 25px;
   padding-bottom: 75px;
-`
+`;
 
 const StyledH2 = styled.h2`
   font-family: "Roboto", sans-serif;
-`
+`;
 
 const StyledH3 = styled.h3`
   margin: 0px;
   padding: 10px;
-`
+`;
 
 const StyledItemsDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 25px;
-`
+`;
 const StyledCartTitleDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-`
+`;
 
 const StyledCheckoutButton = styled.button`
   width: 200px;
@@ -52,11 +52,11 @@ const StyledCheckoutButton = styled.button`
   &:active {
     transform: translateY(1px);
   }
-`
+`;
 const StyledItemsAndTotalDiv = styled.div`
   display: flex;
   justify-content: space-around;
-`
+`;
 
 const StyledTotalDiv = styled.div`
   display: flex;
@@ -66,7 +66,7 @@ const StyledTotalDiv = styled.div`
   height: 15%;
   border-radius: 10px;
   margin-top: 25px;
-`
+`;
 
 const StyledTotalItemDiv = styled.div`
   display: flex;
@@ -74,7 +74,7 @@ const StyledTotalItemDiv = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 500px;
-`
+`;
 
 const StyledNameAndPriceDiv = styled.div`
   display: flex;
@@ -83,20 +83,20 @@ const StyledNameAndPriceDiv = styled.div`
   align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
-`
+`;
 
 export default function Cart() {
-  const cart = useSelector(state => state.cart)
-  const [total, setTotal] = useState(0)
-  const [modalOpen, setModalOpen] = useState(false)
+  const cart = useSelector(state => state.cart);
+  const [total, setTotal] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
-    let total = 0
+    let total = 0;
     cart.forEach(element => {
-      total += parseFloat(element.price) * element.amount
-    })
-    setTotal(total)
-  }, [cart])
+      total += parseFloat(element.price) * element.amount;
+    });
+    setTotal(total);
+  }, [cart]);
 
   return (
     <Layout>
@@ -148,5 +148,5 @@ export default function Cart() {
         {/* <StyledCheckoutAreaDiv></StyledCheckoutAreaDiv> */}
       </StyledRoot>
     </Layout>
-  )
+  );
 }
