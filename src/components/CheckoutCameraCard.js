@@ -1,6 +1,6 @@
-import React from "react"
-import { useDispatch } from "react-redux"
-import styled from "styled-components"
+import React from "react";
+import { useDispatch } from "react-redux";
+import styled from "styled-components";
 
 const StyledMainDiv = styled.div`
   display: flex;
@@ -8,17 +8,17 @@ const StyledMainDiv = styled.div`
   background-color: white;
   border-radius: 10px;
   margin: 25px;
-`
+`;
 
 const StyledH2 = styled.h2`
   margin: 0;
   padding: 0;
-`
+`;
 
 const StyledH4 = styled.h4`
   padding: 0;
   margin: 0;
-`
+`;
 
 const StyledImg = styled.img`
   height: 200px;
@@ -30,7 +30,11 @@ const StyledImg = styled.img`
     height: 160px;
     width: 280px;
   } */
-`
+  @media (max-width: 650px) {
+    height: 100px;
+    width: 175px;
+  }
+`;
 
 const StyledInfoDiv = styled.div`
   display: flex;
@@ -39,14 +43,14 @@ const StyledInfoDiv = styled.div`
   align-items: center;
   text-align: center;
   justify-content: space-around;
-`
+`;
 
 const StyledIncrementDiv = styled.div`
   display: flex;
   flex-direction: row;
   height: 30px;
   align-items: center;
-`
+`;
 
 const StyledIncrementButton = styled.button`
   /* font-family : inherit; */
@@ -64,27 +68,27 @@ const StyledIncrementButton = styled.button`
   &:hover {
     cursor: pointer;
   }
-`
+`;
 
-const StyledButton = styled.button`
-  /* font-family : inherit; */
-  font-size: 1em;
-  width: 115px;
-  height: 35px;
-  color: white;
-  background-color: #70a37f;
-  border-radius: 4px;
-  &:hover {
-    cursor: pointer;
-    background-color: #2e5339;
-  }
-  &:active {
-    transform: translateY(1px);
-  }
-`
+// const StyledButton = styled.button`
+//   /* font-family : inherit; */
+//   font-size: 1em;
+//   width: 115px;
+//   height: 35px;
+//   color: white;
+//   background-color: #70a37f;
+//   border-radius: 4px;
+//   &:hover {
+//     cursor: pointer;
+//     background-color: #2e5339;
+//   }
+//   &:active {
+//     transform: translateY(1px);
+//   }
+// `;
 
 export default function CheckoutCameraCard(props) {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   return (
     <StyledMainDiv>
       <StyledImg src={props.info.photourl}></StyledImg>
@@ -113,5 +117,5 @@ export default function CheckoutCameraCard(props) {
         </StyledButton> */}
       </StyledInfoDiv>
     </StyledMainDiv>
-  )
+  );
 }

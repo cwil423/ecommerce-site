@@ -56,6 +56,10 @@ const StyledCheckoutButton = styled.button`
 const StyledItemsAndTotalDiv = styled.div`
   display: flex;
   justify-content: space-around;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const StyledTotalDiv = styled.div`
@@ -66,6 +70,9 @@ const StyledTotalDiv = styled.div`
   height: 15%;
   border-radius: 10px;
   margin-top: 25px;
+  @media (max-width: 1200px) {
+    width: 90%;
+  }
 `;
 
 const StyledTotalItemDiv = styled.div`
@@ -74,6 +81,9 @@ const StyledTotalItemDiv = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 500px;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
 const StyledNameAndPriceDiv = styled.div`
