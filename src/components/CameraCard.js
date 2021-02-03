@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import Button from "./UI/Button"
+import React from "react";
+import styled from "styled-components";
+import Button from "./UI/Button";
 
 const StyledMainBody = styled.div`
   background-color: white;
@@ -11,36 +11,36 @@ const StyledMainBody = styled.div`
   align-items: center;
   border-radius: 10px;
   width: 350px;
-`
+`;
 
 const StyledInfoArea = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 const StyledNameDiv = styled.div`
   display: flex;
   text-align: center;
-`
+`;
 
 const StyledImage = styled.img`
   height: 200px;
   width: 350px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-`
+`;
 
 const StyledDescriptionDiv = styled.div`
   padding-left: 10px;
   padding-right: 10px;
   font-size: 18px;
   height: 120px;
-`
+`;
 
 const StyledButtonArea = styled.div`
   padding-top: 15px;
-`
+`;
 
 const StyledButton = styled.button`
   /* font-family : inherit; */
@@ -59,10 +59,9 @@ const StyledButton = styled.button`
   &:active {
     transform: translateY(1px);
   }
-`
+`;
 
 export default function CameraCard(props) {
-  console.log(props.info)
   return (
     <StyledMainBody>
       <StyledImage src={props.info.photourl}></StyledImage>
@@ -85,5 +84,5 @@ export default function CameraCard(props) {
         Add to Cart
       </StyledButton>
     </StyledMainBody>
-  )
+  );
 }
