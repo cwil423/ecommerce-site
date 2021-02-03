@@ -93,9 +93,7 @@ export default function Cart() {
   useEffect(() => {
     let total = 0
     cart.forEach(element => {
-      total +=
-        parseFloat(element.price.replace(/,/g, "").substring(1)).toFixed(2) *
-        element.amount
+      total += parseFloat(element.price) * element.amount
     })
     setTotal(total)
   }, [cart])
@@ -129,16 +127,12 @@ export default function Cart() {
                 <StyledTotalItemDiv>
                   <StyledNameAndPriceDiv>
                     <StyledH3>{item.name}</StyledH3>
-                    <StyledH3>{item.price}</StyledH3>
+                    <StyledH3>${parseFloat(item.price).toFixed(2)}</StyledH3>
                   </StyledNameAndPriceDiv>
 
                   <StyledH3>{item.amount}</StyledH3>
                   <StyledH3>
-                    $
-                    {(
-                      parseFloat(item.price.replace(/,/g, "").substring(1)) *
-                      item.amount
-                    ).toFixed(2)}
+                    ${(parseFloat(item.price) * item.amount).toFixed(2)}
                   </StyledH3>
                 </StyledTotalItemDiv>
               ))}

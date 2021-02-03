@@ -71,7 +71,7 @@ export default function CameraCard(props) {
           <h1>{props.info.name}</h1>
         </StyledNameDiv>
         <div>
-          <h3>{props.info.price}</h3>
+          <h3>${props.info.price.toFixed(2)}</h3>
         </div>
         <StyledDescriptionDiv>
           <p>{props.info.description}</p>

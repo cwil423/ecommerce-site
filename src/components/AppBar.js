@@ -30,10 +30,7 @@ export default function AppBar() {
   return (
     <div>
       <StyledSection>
-        <StyledLink
-          to="/Homepage"
-          activeStyle={{ textDecoration: "underline" }}
-        >
+        <StyledLink to="/" activeStyle={{ textDecoration: "underline" }}>
           Home
         </StyledLink>
 

@@ -91,7 +91,7 @@ export default function CheckoutCameraCard(props) {
 
       <StyledInfoDiv>
         <StyledH2>{props.info.name}</StyledH2>
-        <StyledH4>{props.info.price}</StyledH4>
+        <StyledH4>${props.info.price.toFixed(2)}</StyledH4>
 
         <StyledIncrementDiv>
           <StyledIncrementButton
