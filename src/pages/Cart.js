@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import styled from "styled-components"
 import CheckoutCameraCard from "../components/CheckoutCameraCard"
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import Modal from "../components/UI/Modal"
 import Backdrop from "../components/UI/Backdrop"
 
