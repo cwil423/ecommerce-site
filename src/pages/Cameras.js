@@ -53,7 +53,7 @@ export default function Cameras() {
   useEffect(() => {
     let cameras = null
     axios
-      .get("http://localhost:4000/cameras")
+      .get("https://eager-banach-99af26.netlify.app/")
       .then(response => {
         cameras = response.data
         cameras.forEach(element => {
