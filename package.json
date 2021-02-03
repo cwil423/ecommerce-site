@@ -45,6 +45,5 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "proxy": "https://fervent-kepler-8d0468.netlify.app/"
+  }
 }
