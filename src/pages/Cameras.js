@@ -40,7 +40,13 @@ const CameraArea = styled.div`
   @media (min-width: 1200px) {
     width: 1400px;
     height: 100%;
+    z-index: 3;
   }
+`;
+
+const StyledBackdropDiv = styled.div`
+  height: 100vh;
+  background-image: linear-gradient(to top right, #c4cace, #e8b741);
 `;
 
 export default function Cameras() {
@@ -74,6 +80,7 @@ export default function Cameras() {
 
   return (
     <Layout>
+      {cameras.length === 0 ? <StyledBackdropDiv /> : null}
       <Page>
         <CameraArea>
           {cameras.length > 0
