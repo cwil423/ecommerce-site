@@ -14,21 +14,6 @@ const Page = styled.div`
   height: 100%;
   padding-top: 25px;
   padding-bottom: 75px;
-
-  /* @media (min-width: 1355px) {
-    height: 93vh;
-  }   */
-`;
-
-const PageHeader = styled.div`
-  display: flex;
-  background-color: #e8b741;
-  height: 100px;
-`;
-
-const StyledH1 = styled.h1`
-  margin: auto;
-  color: white;
 `;
 
 const CameraArea = styled.div`

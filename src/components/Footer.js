@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 const StyledFooter = styled.div`
   position: sticky;
@@ -12,16 +12,15 @@ const StyledFooter = styled.div`
   height: 50px;
   width: 100%;
   color: white;
-`
-
-const StyledName = styled.h3`
-  padding-right: 25px;
-`
+  h3 {
+    padding-right: 25px;
+  }
+`;
 
 export default function Footer() {
   return (
     <StyledFooter>
-      <StyledName>Created by Cole Williamson @ 2021</StyledName>
+      <h3>Created by Cole Williamson @ 2021</h3>
     </StyledFooter>
-  )
+  );
 }
