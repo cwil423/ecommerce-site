@@ -85,7 +85,12 @@ export default function Homepage() {
           <img src={cameraPhoto} />
         </HeroDiv>
         <StyledBottomDiv>
-          <CameraDiv photoOrientation="left" photo="beach">
+          <CameraDiv
+            photoOrientation="left"
+            photo="beach"
+            description="The X-T3 brings with it a brand new sensor, improved autofocus and video performance that makes it competitive with Panasonic's GH5, taking the X-T series from being a very good stills camera to one of the best stills/video hybrids on the market."
+            price="$1499.00"
+          >
             Camera
           </CameraDiv>
           <CameraDiv photoOrientation="right" photo="close">
