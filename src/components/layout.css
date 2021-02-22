@@ -6,7 +6,7 @@ html {
   font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
-  background-image: linear-gradient(to top right, #c4cace, #e8b741);
+  /* background-image: linear-gradient(to top right, #c4cace, #e8b741); */
 }
 body {
   margin: 0;

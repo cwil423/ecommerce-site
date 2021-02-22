@@ -8,19 +8,19 @@ const StyledSection = styled.section`
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 100px;
-  background-color: #1b2226;
+  height: 75px;
+  background-color: white;
 `;
 
 const StyledH2 = styled.h2`
-  color: white;
+  /* color: black; */
   margin: 0px;
   padding: 0px;
-  /* color: white; */
+  color: #e8b741;
 `;
 
 const StyledLink = styled(props => <Link {...props} />)`
-  color: white;
+  color: #e8b741;
   text-decoration: none;
   font-size: x-large;
   @media (max-width: 600px) {
@@ -44,7 +44,7 @@ const StyledCartButtonNumber = styled.div`
   align-items: center;
   margin: 5px;
   color: black;
-  background-color: white;
+  background-color: #e8b741;
   border-radius: 100px;
   height: 18px;
   width: 18px;
