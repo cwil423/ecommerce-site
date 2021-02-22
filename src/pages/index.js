@@ -1,14 +1,19 @@
-import React from "react"
-import styled from "styled-components"
-import AppBar from "../components/AppBar"
-import Layout from "../components/layout"
-import cameraPhoto from "../images/camera.jpg"
+import React from "react";
+import styled from "styled-components";
+import AppBar from "../components/AppBar";
+import Layout from "../components/layout";
+import cameraPhoto from "../images/camera.jpg";
+
+const StyledRoot = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 const MainDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 1169px;
+  min-height: 800px;
   width: 100%;
   background-color: #e8b741;
   background-image: url(${cameraPhoto});
@@ -25,7 +30,7 @@ const MainDiv = styled.div`
   @media (max-width: 600px) {
     min-height: 661px;
   }
-`
+`;
 
 const TitleH1 = styled.h1`
   display: flex;
@@ -35,7 +40,7 @@ const TitleH1 = styled.h1`
   text-align: center;
   width: 80%;
   height: 200px;
-`
+`;
 
 const StyledH4 = styled.h4`
   margin: auto;
@@ -43,7 +48,7 @@ const StyledH4 = styled.h4`
   @media (min-width: 600px) {
     font-size: 30px;
   }
-`
+`;
 
 const StyledH1 = styled.h1`
   margin: auto;
@@ -51,19 +56,21 @@ const StyledH1 = styled.h1`
   @media (min-width: 600px) {
     font-size: 50px;
   }
-`
+`;
 
 export default function Homepage() {
   return (
     <Layout>
-      <MainDiv>
-        <TitleH1>
-          <StyledH1>CameraStore</StyledH1>
-          <StyledH4>
-            Pick from a curated selection of the finest cameras available
-          </StyledH4>
-        </TitleH1>
-      </MainDiv>
+      <StyledRoot>
+        <MainDiv>
+          {/* <TitleH1>
+            <StyledH1>CameraStore</StyledH1>
+            <StyledH4>
+              Pick from a curated selection of the finest cameras available
+            </StyledH4>
+          </TitleH1> */}
+        </MainDiv>
+      </StyledRoot>
     </Layout>
-  )
+  );
 }

@@ -13,6 +13,7 @@ const StyledSection = styled.section`
 `;
 
 const StyledH2 = styled.h2`
+  color: white;
   margin: 0px;
   padding: 0px;
   /* color: white; */
@@ -21,9 +22,9 @@ const StyledH2 = styled.h2`
 const StyledLink = styled(props => <Link {...props} />)`
   color: white;
   text-decoration: none;
-  font-size: xx-large;
+  font-size: x-large;
   @media (max-width: 600px) {
-    font-size: x-large;
+    font-size: large;
   }
 `;
 
@@ -68,6 +69,7 @@ export default function AppBar() {
   return (
     <div>
       <StyledSection>
+        <StyledH2>CameraStore</StyledH2>
         <StyledLink to="/" activeStyle={{ textDecoration: "underline" }}>
           Home
         </StyledLink>
