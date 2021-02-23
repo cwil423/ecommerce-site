@@ -43,7 +43,7 @@ const StyledCartButtonNumber = styled.div`
   justify-content: center;
   align-items: center;
   margin: 5px;
-  color: black;
+  color: white;
   background-color: #e8b741;
   border-radius: 100px;
   height: 18px;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 import AppBar from "../components/AppBar";
 import Layout from "../components/layout";
 import cameraPhoto from "../images/camera.jpg";
@@ -8,35 +9,23 @@ import FeaturedCameras from "../components/FeaturedCameras";
 const StyledRoot = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
-const HeroDiv = styled.div`
+const StyledHeroDiv = styled.div`
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
-
   width: 100%;
   background-color: #e8b741;
-  /* background-image: url(${cameraPhoto}); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
-  @media (max-width: 1000px) {
-    background-size: 150%;
-  }
-  @media (min-width: 1000px) {
-    background-size: 1600px;
-  }
-  @media (max-width: 600px) {
-    min-height: 661px;
-  }
   img {
     height: 650px;
     margin: 0px;
     padding: 0px;
-    /* border: 1px solid black; */
   }
 `;
 
@@ -67,6 +56,12 @@ const StyledLinkDiv = styled.div`
   }
 `;
 
+const StyledLink = styled(props => <Link {...props} />)`
+  color: #e8b741;
+  text-decoration: none;
+  /* font-size: x-large; */
+`;
+
 const StyledBottomDiv = styled.div`
   display: flex;
   flex-direction: column;
@@ -76,14 +71,16 @@ export default function Homepage() {
   return (
     <Layout>
       <StyledRoot>
-        <HeroDiv>
+        <StyledHeroDiv>
           <StyledCaptionDiv>
             <h1>Top of the line cameras</h1>
             <p>For professionals and professional amateurs</p>
-            <StyledLinkDiv>Buy Here</StyledLinkDiv>
+            <StyledLinkDiv>
+              <StyledLink to="/Cameras">Buy Here</StyledLink>
+            </StyledLinkDiv>
           </StyledCaptionDiv>
           <img src={cameraPhoto} />
-        </HeroDiv>
+        </StyledHeroDiv>
         <StyledBottomDiv>
           <FeaturedCameras
             photoOrientation="left"

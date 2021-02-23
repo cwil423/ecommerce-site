@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import cameraCloseup from "../images/camera-closeup.jpg";
-import cameraTable from "../images/camera-table.jpg";
 import cameraStreet from "../images/camera-street.jpg";
-import leicaM6 from "../images/leica-m6.jpg";
-import eosr5 from "../images/canonEOSR5.jpg";
 import leicaR7 from "../images/leicaR7.jpg";
 
 const StyledRootDiv = styled.div`
@@ -13,6 +9,7 @@ const StyledRootDiv = styled.div`
   height: 500px;
   padding: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 1500px;
   img {
     height: 460px;
   }
