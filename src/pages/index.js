@@ -45,7 +45,7 @@ const StyledCaptionDiv = styled.div`
   color: white;
   @media (max-width: 1000px) {
     margin: 0;
-    height: 200px;
+    height: 220px;
     width: 300px;
     margin-top: 20px;
   }
