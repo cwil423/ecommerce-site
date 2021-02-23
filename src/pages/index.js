@@ -27,7 +27,7 @@ const StyledHeroDiv = styled.div`
   @media (max-width: 1000px) {
     flex-direction: column;
     img {
-      height: 400px;
+      height: 300px;
     }
   }
 `;
@@ -45,8 +45,9 @@ const StyledCaptionDiv = styled.div`
   color: white;
   @media (max-width: 1000px) {
     margin: 0;
-    height: 150px;
-    margin-top: 50px;
+    height: 200px;
+    width: 300px;
+    margin-top: 20px;
   }
 `;
 
