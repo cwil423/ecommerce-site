@@ -13,6 +13,7 @@ const StyledRoot = styled.div`
   padding-top: 25px;
   padding-bottom: 75px;
   /* color: #e8b741; */
+  border-top: 1px solid gray;
 `;
 
 const StyledH2 = styled.h2`
