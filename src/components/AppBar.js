@@ -10,6 +10,7 @@ const StyledSection = styled.section`
   width: 100%;
   height: 75px;
   background-color: white;
+  border-bottom: 1px solid gray;
 `;
 
 const StyledH2 = styled.h2`

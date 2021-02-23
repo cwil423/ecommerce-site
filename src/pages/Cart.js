@@ -12,6 +12,7 @@ const StyledRoot = styled.div`
   min-height: 1169px;
   padding-top: 25px;
   padding-bottom: 75px;
+  /* color: #e8b741; */
 `;
 
 const StyledH2 = styled.h2`

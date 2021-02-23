@@ -14,7 +14,6 @@ const Page = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  padding-top: 25px;
   padding-bottom: 75px;
 `;
 
@@ -29,7 +28,7 @@ const StyledHeroDiv = styled.div`
   background-size: 100%;
 
   background-position: center;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
   h1 {
     color: white;
   }
@@ -59,17 +58,11 @@ const StyledBackdropDiv = styled.div`
   background-image: linear-gradient(to top right, #c4cace, #e8b741);
 `;
 
-const StyledOrderByDiv = styled.div`
-  /* width: 70%;
-  @media (min-width: 1200px) {
-    width: 1200px;
-  } */
-`;
+const StyledOrderByDiv = styled.div``;
 
 const StyledSelect = styled.select`
   height: 50px;
   border-radius: 4px;
-  /* margin-top: 15px; */
 `;
 
 export default function Cameras() {
@@ -82,8 +75,8 @@ export default function Cameras() {
   useEffect(() => {
     let cameras = null;
     axios
-      .get("http://localhost:4000/cameras")
-      // .get("https://ecommerce-site-backend.herokuapp.com/cameras")
+      // .get("http://localhost:4000/cameras")
+      .get("https://ecommerce-site-backend.herokuapp.com/cameras")
       .then(response => {
         cameras = response.data;
         cameras.forEach(element => {

@@ -6,8 +6,9 @@ const StyledMainDiv = styled.div`
   display: flex;
   flex-direction: row;
   background-color: white;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   margin: 25px;
+  border: 1px solid gray;
 
   h2 {
     margin: 0;
@@ -23,8 +24,8 @@ const StyledMainDiv = styled.div`
     height: 200px;
     width: 350px;
     margin: 0px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    /* border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; */
     @media (max-width: 650px) {
       height: 100px;
       width: 175px;

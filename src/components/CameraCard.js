@@ -9,14 +9,14 @@ const StyledMainBody = styled.div`
   justify-content: space-between;
   margin: 50px;
   align-items: center;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   width: 350px;
 
   img {
     height: 200px;
     width: 350px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
   }
 
   button {
@@ -67,9 +67,9 @@ export default function CameraCard(props) {
         <div>
           <h3>${props.info.price.toFixed(2)}</h3>
         </div>
-        <StyledDescriptionDiv>
+        {/* <StyledDescriptionDiv>
           <p>{props.info.description}</p>
-        </StyledDescriptionDiv>
+        </StyledDescriptionDiv> */}
       </StyledInfoArea>
       <button
         disabled={props.disabled}
