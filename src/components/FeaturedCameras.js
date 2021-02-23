@@ -13,6 +13,15 @@ const StyledRootDiv = styled.div`
   img {
     height: 460px;
   }
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+    justify-content: center;
+    img {
+      width: 350px;
+    }
+  }
 `;
 
 const StyledTextAreaDiv = styled.div`
@@ -20,7 +29,9 @@ const StyledTextAreaDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 100px;
-  /* background-color: red; */
+  @media (max-width: 1000px) {
+    padding: 25px;
+  }
 `;
 
 const StyledPriceAreaDiv = styled.div`

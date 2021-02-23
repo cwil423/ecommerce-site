@@ -19,11 +19,16 @@ const StyledHeroDiv = styled.div`
   justify-content: center;
   width: 100%;
   background-color: #e8b741;
-
   img {
     height: 650px;
     margin: 0px;
     padding: 0px;
+  }
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    img {
+      height: 400px;
+    }
   }
 `;
 
@@ -37,19 +42,21 @@ const StyledCaptionDiv = styled.div`
   height: 100px;
   width: 500px;
   margin-left: 50px;
-
-  /* color: white; */
   color: white;
+  @media (max-width: 1000px) {
+    margin: 0;
+    height: 150px;
+    margin-top: 50px;
+  }
 `;
 
 const StyledLinkDiv = styled.div`
-  height: 50px;
+  height: 25px;
   width: 100px;
   background-color: white;
   color: #e8b741;
   cursor: pointer;
   :active {
-    /* box-shadow: 0 1px #666; */
     transform: translateY(1px);
   }
 `;
@@ -57,7 +64,6 @@ const StyledLinkDiv = styled.div`
 const StyledLink = styled(props => <Link {...props} />)`
   color: #e8b741;
   text-decoration: none;
-  /* font-size: x-large; */
 `;
 
 const StyledBottomDiv = styled.div`
