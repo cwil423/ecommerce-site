@@ -33,6 +33,12 @@ const StyledHeroDiv = styled.div`
   h1 {
     color: white;
   }
+  @media (max-width: 1354px) {
+    background-size: 300%;
+  }
+  /* @media (min-width: 1200px) {
+    width: 1600px;
+  } */
 `;
 
 const CameraArea = styled.div`
