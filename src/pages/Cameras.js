@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import Card from "../components/UI/Card";
 import CameraCard from "../components/CameraCard";
 import Button from "../components/UI/Button";
+import cameras from "../images/cameras.jpg";
 
 const Page = styled.div`
   display: flex;
@@ -15,6 +16,23 @@ const Page = styled.div`
   height: 100%;
   padding-top: 25px;
   padding-bottom: 75px;
+`;
+
+const StyledHeroDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+
+  background-image: url(${cameras});
+  background-size: 100%;
+
+  background-position: center;
+  margin-bottom: 25px;
+  h1 {
+    color: white;
+  }
 `;
 
 const CameraArea = styled.div`
@@ -123,6 +141,9 @@ export default function Cameras() {
     <Layout>
       {cameras.length === 0 ? <StyledBackdropDiv /> : null}
       <Page>
+        <StyledHeroDiv>
+          <h1>Cameras</h1>
+        </StyledHeroDiv>
         <StyledOrderByDiv>
           <StyledSelect onChange={e => sortHandler(e.target.value)}>
             <option value="name-desc">Name A-Z</option>

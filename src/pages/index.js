@@ -19,9 +19,7 @@ const StyledHeroDiv = styled.div`
   justify-content: center;
   width: 100%;
   background-color: #e8b741;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+
   img {
     height: 650px;
     margin: 0px;
